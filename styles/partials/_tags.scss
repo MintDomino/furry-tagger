@@ -1,6 +1,10 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+.form {
+    margin-top: 70px;
+}
+
 .card {
     @include card(1);
     border-radius: 2px;

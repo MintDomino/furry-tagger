@@ -36,8 +36,25 @@ h5 {
   .small-link:active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25); }
 
+.center {
+  text-align: center; }
+
+.error {
+  text-align: center;
+  color: red;
+  font-weight: bold; }
+
+.placeholder-form {
+  height: 530px; }
+
+hr {
+  border: 1px solid #943156; }
+
 /* FONTS */
 /* COLORS */
+.form {
+  margin-top: 70px; }
+
 .card {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   border-radius: 2px;

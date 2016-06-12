@@ -5,6 +5,18 @@
         <link rel="stylesheet" type="text/css" href="dist/styles/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="dist/styles/default.css">
+            
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCzDqSqT7lV4Ye5Xa-rSpOTegllqb-SMls",
+                authDomain: "furrytagger.firebaseapp.com",
+                databaseURL: "https://furrytagger.firebaseio.com",
+                storageBucket: "",
+            };
+            firebase.initializeApp(config);
+        </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -12,6 +24,7 @@
         <script src="dist/scripts/clipboard.min.js"></script>
         
         <script src="dist/scripts/furtool.module.js"></script>
+        <script src="dist/scripts/furtool.dataservice.js"></script>
         <script src="dist/scripts/furtool.tagfactory.js"></script>
         <script src="dist/scripts/furtool.controller.js"></script>
 
@@ -67,6 +80,24 @@
                 </div>
                 
             </div>
+            
+                <div class="row form">
+                    <div class="col-sm-12">
+                        <h2>Feedback / Suggestions (Contact)</h2>
+                        <hr>
+                        <h3 class="success" ng-if="converter.ideaMessage">{{converter.ideaMessage}}</h3>
+                        <p class="error" ng-if="converter.ideaError">{{converter.ideaError}}</p>
+                        <div class="placeholder-form" ng-if="converter.submitted"></div>
+                        <div ng-if="!converter.submitted">
+                            <label>Optional Contact Information</label><br>
+                            <input type="text" class="form-control" ng-model="converter.suggestion.contact" placeholder="Optional Contact Info" /> <br>
+                            <label>Feedback / Suggestion</label><br >
+                            <small>{{converter.suggestion.idea.length}} / {{converter.maxChars}} Characters Remaining</small>
+                            <textarea rows="5" class="form-control" ng-model="converter.suggestion.idea" placeholder="Your Suggestion"></textarea> <br>
+                            <button ng-click="converter.submitIdea()" class="small-link">Submit Feedback</button>
+                        </div>
+                    </div>
+                </div>
             
         </div>
     </body>
