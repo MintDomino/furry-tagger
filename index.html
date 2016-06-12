@@ -1,0 +1,73 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="dist/styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="dist/styles/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="dist/styles/default.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="dist/scripts/clipboard.min.js"></script>
+        
+        <script src="dist/scripts/furtool.module.js"></script>
+        <script src="dist/scripts/furtool.tagfactory.js"></script>
+        <script src="dist/scripts/furtool.controller.js"></script>
+
+    </head>
+    <body ng-app="furtool" ng-controller="Converter as converter">
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="primary-header red">
+                            <h5> Tag Converter </h5>
+                        </div>
+                        <div class="info-panel">
+                            <label>Enter Tags:</label><br>
+                            <small>
+                                Formatting:<br>
+                                Enter tags separated by commas.<br>
+                                Use spaces for multiple word tags <strong>only</strong>.
+                            </small><br>
+                            <small>Example: furry,nsfw,holding hands</small>
+                            <textarea ng-model="converter.tags" ng-change="converter.convert()" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="primary-header green">
+                            <h5> Results </h5>
+                        </div>
+                        <div class="info-panel">
+                            <div ng-if="converter.tags">
+                                <h5>e621:</h5> 
+                                <p id="e621tags">{{converter.e621Tags}}</p> <br>
+                                <button data-clipboard-target="#e621tags" class="small-link">Copy</button>
+                                <hr>
+                                <h5>Furaffinity:</h5>
+                                <p id="furaffinitytags">{{converter.furaffinityTags}}</p><br>
+                                <button data-clipboard-target="#furaffinitytags" class="small-link">Copy</button>
+                                <hr>
+                                <h5>Inkbunny:</h5>
+                                <p id="inkbunnytags">{{converter.inkbunnyTags}}</p><br>
+                                <button data-clipboard-target="#inkbunnytags" class="small-link">Copy</button>
+                                <hr>
+                                <h5>Furry Network:</h5>
+                                <p id="furrynetworktags">{{converter.furryNetworkTags}}</p><br>
+                                <button data-clipboard-target="#furrynetworktags" class="small-link">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </body>
+</html>

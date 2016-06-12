@@ -1,0 +1,47 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+body {
+    font-family: $oxygen;
+    background: $color-white;
+}
+
+h1 {
+    font-size: $font-h1;
+}
+
+h2 {
+    font-size: $font-h2;
+}
+
+h3 {
+    font-size: $font-h3;
+}
+
+h4 {
+    font-size: $font-h4;
+}
+
+h5 {
+    font-size: $font-h5;
+}
+
+.small-link {
+    @include card(1);
+    font-size: 18px;
+    width: 25%;
+    border: none !important;
+    margin-bottom: 10px;
+    background: $color-gold;
+    padding: 5px 15px;
+    color: #FFFFFF;
+    
+    &:hover {
+        @include card(2);
+    }
+    
+    &:active {
+        @include card(4);
+    }
+}

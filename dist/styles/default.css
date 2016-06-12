@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700);
+/* FONTS */
+/* COLORS */
+/* FONTS */
+/* COLORS */
+body {
+  font-family: "Oxygen", sans-serif;
+  background: #F5F5F5; }
+
+h1 {
+  font-size: 54px; }
+
+h2 {
+  font-size: 42px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 18px; }
+
+.small-link {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  width: 25%;
+  border: none !important;
+  margin-bottom: 10px;
+  background: #AA7639;
+  padding: 5px 15px;
+  color: #FFFFFF; }
+  .small-link:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+  .small-link:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25); }
+
+/* FONTS */
+/* COLORS */
+.card {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  background: #FFFFFF; }
+  .card .primary-header {
+    border-radius: 2px 2px 0 0;
+    padding: 5px;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center; }
+    .card .primary-header.red {
+      background: #943156; }
+    .card .primary-header.green {
+      background: #28784D; }
+  .card .display-panel {
+    text-align: center; }
+    .card .display-panel img {
+      max-height: 350px;
+      max-width: 100%;
+      margin-top: 15px; }
+  .card .info-panel {
+    text-align: center;
+    padding-bottom: 15px; }
+    .card .info-panel h5 {
+      color: #943156; }
+    .card .info-panel a {
+      width: 25%;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 18px; }
