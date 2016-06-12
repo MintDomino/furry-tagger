@@ -60,7 +60,9 @@ h5 {
       margin-top: 15px; }
   .card .info-panel {
     text-align: center;
-    padding-bottom: 15px; }
+    padding: 15px; }
+    .card .info-panel textarea {
+      margin-top: 15px; }
     .card .info-panel h5 {
       color: #943156; }
     .card .info-panel a {
